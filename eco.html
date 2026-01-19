@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Log Painting Company - Professional Painting Services in Nairobi</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .gradient-overlay {
+      background: linear-gradient(135deg, rgba(26,77,46,0.92) 0%, rgba(45,122,62,0.85) 100%);
+    }
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(15,42,68,0.15);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #60a5fa;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .experience-item {
+      position: relative;
+      padding-left: 30px;
+    }
+    .experience-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      background: #2d7a3e;
+      border-radius: 50%;
+    }
+    .experience-item::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 24px;
+      width: 2px;
+      height: calc(100% - 8px);
+      background: #e5e7eb;
+    }
+    .experience-item:last-child::after {
+      display: none;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    .animate-delay-1 { animation-delay: 0.2s; opacity: 0; }
+    .animate-delay-2 { animation-delay: 0.4s; opacity: 0; }
+    .animate-delay-3 { animation-delay: 0.6s; opacity: 0; }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="bg-slate-50 text-gray-800 overflow-x-hidden">
+  <div id="app-wrapper" class="w-full overflow-auto"><!-- WhatsApp Floating Button --> <a href="https://wa.me/254116857554" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-white hover:scale-110 transition-transform" style="background: #25D366;">
+    <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg></a> <!-- HEADER -->
+   <header class="sticky top-0 z-50 shadow-lg" id="header-bg" style="background: #1a4d2e;">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+     <h1 class="text-xl md:text-2xl font-bold text-white tracking-tight"><span class="text-green-400">Eco Log</span> Painting Company</h1>
+     <nav class="hidden md:flex gap-8"><a href="#about" class="nav-link text-white/90 hover:text-white font-medium transition-colors">About</a> <a href="#services" class="nav-link text-white/90 hover:text-white font-medium transition-colors">Services</a> <a href="#testimonials" class="nav-link text-white/90 hover:text-white font-medium transition-colors">Testimonials</a> <a href="#gallery" class="nav-link text-white/90 hover:text-white font-medium transition-colors">Gallery</a> <a href="#contact" class="nav-link text-white/90 hover:text-white font-medium transition-colors">Contact</a>
+     </nav><button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Toggle menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg></button>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+     <nav class="flex flex-col gap-3"><a href="#about" class="text-white/90 hover:text-white font-medium py-2 border-b border-white/10">About</a> <a href="#services" class="text-white/90 hover:text-white font-medium py-2 border-b border-white/10">Services</a> <a href="#testimonials" class="text-white/90 hover:text-white font-medium py-2 border-b border-white/10">Testimonials</a> <a href="#gallery" class="text-white/90 hover:text-white font-medium py-2 border-b border-white/10">Gallery</a> <a href="#contact" class="text-white/90 hover:text-white font-medium py-2">Contact</a>
+     </nav>
+    </div>
+   </header><!-- HERO -->
+   <section class="relative min-h-[85%] flex items-center justify-center gradient-overlay">
+    <div class="absolute inset-0 opacity-20">
+     <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><defs>
+       <pattern id="grid" width="10" height="10" patternunits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.3" />
+       </pattern>
+      </defs> <rect width="100" height="100" fill="url(#grid)" />
+     </svg>
+    </div>
+    <div class="relative z-10 text-center px-6 py-20 max-w-4xl mx-auto">
+     <div class="animate-fade-in"><span class="inline-block px-4 py-2 bg-white/10 backdrop-blur rounded-full text-blue-300 text-sm font-medium mb-6"> Trusted Professional Services </span>
+     </div>
+     <h2 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in animate-delay-1">Professional &amp; Reliable Solutions</h2>
+     <p id="hero-subtitle" class="text-lg md:text-xl text-white/85 mb-10 max-w-2xl mx-auto animate-fade-in animate-delay-2">Delivering quality workmanship, trust, and excellence for individuals and businesses across all sectors.</p>
+     <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animate-delay-3"><a href="#contact" id="cta-btn" class="inline-block px-8 py-4 rounded-lg font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all" style="background: #1f6aa5;"> Get in Touch </a> <a href="#services" class="inline-block px-8 py-4 bg-white/10 backdrop-blur border border-white/30 rounded-lg font-semibold text-white hover:bg-white/20 transition-all"> Our Services </a>
+     </div>
+    </div><!-- Decorative elements -->
+    <div class="absolute bottom-0 left-0 right-0">
+     <svg viewbox="0 0 1440 120" fill="none" class="w-full"><path fill="#f8fafc" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
+     </svg>
+    </div>
+   </section><!-- ABOUT -->
+   <section id="about" class="py-20 px-6" style="background: #f8fafc;">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-12"><span class="text-sm font-semibold uppercase tracking-wider" style="color: #1f6aa5;">Who We Are</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2" style="color: #0f2a44;">About Eco Painting Company</h2>
+     </div>
+     <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+       <p id="about-text" class="text-lg leading-relaxed mb-6" style="color: #4b5563;">Eco Painting Company is a trusted provider of professional painting services, dedicated to delivering exceptional quality and eco-friendly solutions. With years of experience and a commitment to excellence, we serve individuals and businesses with integrity, skill, and attention to detail.</p>
+       <p class="text-lg leading-relaxed mb-8" style="color: #4b5563;">Our mission is to exceed expectations on every project, building lasting relationships through honest communication and outstanding results.</p>
+       <div class="grid grid-cols-2 gap-6">
+        <div class="text-center p-4 rounded-lg" style="background: white;">
+         <div class="text-3xl font-bold" style="color: #1f6aa5;">
+          10+
+         </div>
+         <div class="text-sm" style="color: #6b7280;">
+          Years Experience
+         </div>
+        </div>
+        <div class="text-center p-4 rounded-lg" style="background: white;">
+         <div class="text-3xl font-bold" style="color: #1f6aa5;">
+          500+
+         </div>
+         <div class="text-sm" style="color: #6b7280;">
+          Happy Clients
+         </div>
+        </div>
+        <div class="text-center p-4 rounded-lg" style="background: white;">
+         <div class="text-3xl font-bold" style="color: #1f6aa5;">
+          100%
+         </div>
+         <div class="text-sm" style="color: #6b7280;">
+          Satisfaction
+         </div>
+        </div>
+        <div class="text-center p-4 rounded-lg" style="background: white;">
+         <div class="text-3xl font-bold" style="color: #1f6aa5;">
+          24/7
+         </div>
+         <div class="text-sm" style="color: #6b7280;">
+          Support
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="relative">
+       <div class="rounded-2xl overflow-hidden shadow-2xl" style="background: linear-gradient(135deg, #0f2a44 0%, #1f6aa5 100%);">
+        <div class="p-8 text-white">
+         <svg class="w-16 h-16 mb-4 opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+         </svg>
+         <h3 class="text-2xl font-bold mb-3">Our Promise</h3>
+         <p class="text-white/85 leading-relaxed">We guarantee professional service, transparent pricing, and results that speak for themselves. Your satisfaction is our top priority.</p>
+        </div>
+       </div>
+       <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-full opacity-20" style="background: #1f6aa5;"></div>
+      </div>
+     </div>
+    </div>
+   </section><!-- SERVICES -->
+   <section id="services" class="py-20 px-6" style="background: white;">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16"><span class="text-sm font-semibold uppercase tracking-wider" style="color: #1f6aa5;">What We Offer</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2" style="color: #0f2a44;">Our Services</h2>
+      <p class="mt-4 max-w-2xl mx-auto" style="color: #6b7280;">Comprehensive solutions tailored to meet your needs with professionalism and expertise.</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Service 1 -->
+      <div class="service-card rounded-xl p-8 shadow-lg border border-gray-100" style="background: white;">
+       <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background: rgba(31,106,165,0.1);">
+        <svg class="w-7 h-7" style="color: #1f6aa5;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold mb-3" style="color: #0f2a44;">Business Consulting</h3>
+       <p style="color: #6b7280;">Strategic guidance and expert advice to help your business grow and succeed in competitive markets.</p><!-- Photo Upload -->
+       <div class="mt-4"><label class="block text-sm font-medium mb-2" style="color: #374151;">Service Photo</label> <input type="file" accept="image/*" class="service-photo-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" data-service="1">
+        <div class="service-photo-preview mt-3 hidden"><img class="w-full h-40 object-cover rounded-lg shadow-md" alt="Service photo">
+        </div>
+       </div>
+      </div><!-- Service 2 -->
+      <div class="service-card rounded-xl p-8 shadow-lg border border-gray-100" style="background: white;">
+       <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background: rgba(31,106,165,0.1);">
+        <svg class="w-7 h-7" style="color: #1f6aa5;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold mb-3" style="color: #0f2a44;">Project Management</h3>
+       <p style="color: #6b7280;">End-to-end project coordination ensuring timely delivery, quality control, and budget adherence.</p><!-- Photo Upload -->
+       <div class="mt-4"><label class="block text-sm font-medium mb-2" style="color: #374151;">Service Photo</label> <input type="file" accept="image/*" class="service-photo-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" data-service="2">
+        <div class="service-photo-preview mt-3 hidden"><img class="w-full h-40 object-cover rounded-lg shadow-md" alt="Service photo">
+        </div>
+       </div>
+      </div><!-- Service 3 -->
+      <div class="service-card rounded-xl p-8 shadow-lg border border-gray-100" style="background: white;">
+       <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background: rgba(31,106,165,0.1);">
+        <svg class="w-7 h-7" style="color: #1f6aa5;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold mb-3" style="color: #0f2a44;">Team Support</h3>
+       <p style="color: #6b7280;">Dedicated support services to enhance your team's productivity and operational efficiency.</p><!-- Photo Upload -->
+       <div class="mt-4"><label class="block text-sm font-medium mb-2" style="color: #374151;">Service Photo</label> <input type="file" accept="image/*" class="service-photo-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" data-service="3">
+        <div class="service-photo-preview mt-3 hidden"><img class="w-full h-40 object-cover rounded-lg shadow-md" alt="Service photo">
+        </div>
+       </div>
+      </div><!-- Service 4 -->
+      <div class="service-card rounded-xl p-8 shadow-lg border border-gray-100" style="background: white;">
+       <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background: rgba(31,106,165,0.1);">
+        <svg class="w-7 h-7" style="color: #1f6aa5;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold mb-3" style="color: #0f2a44;">Innovation Strategy</h3>
+       <p style="color: #6b7280;">Creative solutions and forward-thinking approaches to keep your business ahead of the curve.</p><!-- Photo Upload -->
+       <div class="mt-4"><label class="block text-sm font-medium mb-2" style="color: #374151;">Service Photo</label> <input type="file" accept="image/*" class="service-photo-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" data-service="4">
+        <div class="service-photo-preview mt-3 hidden"><img class="w-full h-40 object-cover rounded-lg shadow-md" alt="Service photo">
+        </div>
+       </div>
+      </div><!-- Service 5 -->
+      <div class="service-card rounded-xl p-8 shadow-lg border border-gray-100" style="background: white;">
+       <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background: rgba(31,106,165,0.1);">
+        <svg class="w-7 h-7" style="color: #1f6aa5;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold mb-3" style="color: #0f2a44;">Financial Advisory</h3>
+       <p style="color: #6b7280;">Expert financial guidance to optimize resources and maximize your return on investment.</p><!-- Photo Upload -->
+       <div class="mt-4"><label class="block text-sm font-medium mb-2" style="color: #374151;">Service Photo</label> <input type="file" accept="image/*" class="service-photo-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" data-service="5">
+        <div class="service-photo-preview mt-3 hidden"><img class="w-full h-40 object-cover rounded-lg shadow-md" alt="Service photo">
+        </div>
+       </div>
+      </div><!-- Service 6 -->
+      <div class="service-card rounded-xl p-8 shadow-lg border border-gray-100" style="background: white;">
+       <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background: rgba(31,106,165,0.1);">
+        <svg class="w-7 h-7" style="color: #1f6aa5;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold mb-3" style="color: #0f2a44;">Quality Assurance</h3>
+       <p style="color: #6b7280;">Rigorous quality control processes to ensure every deliverable meets the highest standards.</p><!-- Photo Upload -->
+       <div class="mt-4"><label class="block text-sm font-medium mb-2" style="color: #374151;">Service Photo</label> <input type="file" accept="image/*" class="service-photo-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" data-service="6">
+        <div class="service-photo-preview mt-3 hidden"><img class="w-full h-40 object-cover rounded-lg shadow-md" alt="Service photo">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- TESTIMONIALS -->
+   <section id="testimonials" class="py-20 px-6" style="background: white;">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16"><span class="text-sm font-semibold uppercase tracking-wider" style="color: #2d7a3e;">What Clients Say</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2" style="color: #1a4d2e;">Client Testimonials</h2>
+      <p class="mt-4 max-w-2xl mx-auto" style="color: #6b7280;">Don't just take our word for it - hear from our satisfied clients</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8"><!-- Testimonial 1 -->
+      <div class="bg-gray-50 rounded-xl p-8 shadow-lg border border-gray-100">
+       <div class="flex items-center mb-4">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg" style="background: #2d7a3e;">
+         JK
+        </div>
+        <div class="ml-4">
+         <h4 class="font-bold" style="color: #1a4d2e;">John Kamau</h4>
+         <p class="text-sm" style="color: #6b7280;">Homeowner</p>
+        </div>
+       </div>
+       <div class="flex mb-3">
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+       </div>
+       <p style="color: #4b5563;">"Excellent work! The team was professional, on time, and the quality exceeded our expectations. Our home looks brand new!"</p>
+      </div><!-- Testimonial 2 -->
+      <div class="bg-gray-50 rounded-xl p-8 shadow-lg border border-gray-100">
+       <div class="flex items-center mb-4">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg" style="background: #2d7a3e;">
+         SM
+        </div>
+        <div class="ml-4">
+         <h4 class="font-bold" style="color: #1a4d2e;">Sarah Mwangi</h4>
+         <p class="text-sm" style="color: #6b7280;">Business Owner</p>
+        </div>
+       </div>
+       <div class="flex mb-3">
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+       </div>
+       <p style="color: #4b5563;">"They painted our office and it looks fantastic! Very reliable, clean work, and great communication throughout the project."</p>
+      </div><!-- Testimonial 3 -->
+      <div class="bg-gray-50 rounded-xl p-8 shadow-lg border border-gray-100">
+       <div class="flex items-center mb-4">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg" style="background: #2d7a3e;">
+         DO
+        </div>
+        <div class="ml-4">
+         <h4 class="font-bold" style="color: #1a4d2e;">David Omondi</h4>
+         <p class="text-sm" style="color: #6b7280;">Property Manager</p>
+        </div>
+       </div>
+       <div class="flex mb-3">
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5" style="color: #f59e0b;" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+       </div>
+       <p style="color: #4b5563;">"I've used them for multiple properties. Always consistent quality, fair pricing, and they finish on schedule. Highly recommend!"</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- GALLERY -->
+   <section id="gallery" class="py-20 px-6" style="background: #f8fafc;">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16"><span class="text-sm font-semibold uppercase tracking-wider" style="color: #2d7a3e;">Our Work</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2" style="color: #1a4d2e;">Project Gallery</h2>
+      <p class="mt-4 max-w-2xl mx-auto" style="color: #6b7280;">Take a look at some of our recent painting projects</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-6"><!-- Gallery Item 1 -->
+      <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+       <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+        <div class="text-center p-6">
+         <svg class="w-16 h-16 mx-auto mb-3 opacity-40" style="color: #2d7a3e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg><label class="cursor-pointer"> <span class="text-sm font-medium" style="color: #1a4d2e;">Upload Photo</span> <input type="file" accept="image/*" class="gallery-photo-input hidden" data-gallery="1"> </label>
+        </div>
+       </div>
+       <div class="p-4 bg-white">
+        <h4 class="font-bold" style="color: #1a4d2e;">Residential Project</h4>
+        <p class="text-sm" style="color: #6b7280;">Interior &amp; Exterior Painting</p>
+       </div>
+      </div><!-- Gallery Item 2 -->
+      <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+       <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+        <div class="text-center p-6">
+         <svg class="w-16 h-16 mx-auto mb-3 opacity-40" style="color: #2d7a3e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg><label class="cursor-pointer"> <span class="text-sm font-medium" style="color: #1a4d2e;">Upload Photo</span> <input type="file" accept="image/*" class="gallery-photo-input hidden" data-gallery="2"> </label>
+        </div>
+       </div>
+       <div class="p-4 bg-white">
+        <h4 class="font-bold" style="color: #1a4d2e;">Commercial Space</h4>
+        <p class="text-sm" style="color: #6b7280;">Office Building Renovation</p>
+       </div>
+      </div><!-- Gallery Item 3 -->
+      <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+       <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+        <div class="text-center p-6">
+         <svg class="w-16 h-16 mx-auto mb-3 opacity-40" style="color: #2d7a3e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg><label class="cursor-pointer"> <span class="text-sm font-medium" style="color: #1a4d2e;">Upload Photo</span> <input type="file" accept="image/*" class="gallery-photo-input hidden" data-gallery="3"> </label>
+        </div>
+       </div>
+       <div class="p-4 bg-white">
+        <h4 class="font-bold" style="color: #1a4d2e;">Modern Home</h4>
+        <p class="text-sm" style="color: #6b7280;">Complete Interior Makeover</p>
+       </div>
+      </div><!-- Gallery Item 4 -->
+      <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+       <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+        <div class="text-center p-6">
+         <svg class="w-16 h-16 mx-auto mb-3 opacity-40" style="color: #2d7a3e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg><label class="cursor-pointer"> <span class="text-sm font-medium" style="color: #1a4d2e;">Upload Photo</span> <input type="file" accept="image/*" class="gallery-photo-input hidden" data-gallery="4"> </label>
+        </div>
+       </div>
+       <div class="p-4 bg-white">
+        <h4 class="font-bold" style="color: #1a4d2e;">Retail Store</h4>
+        <p class="text-sm" style="color: #6b7280;">Brand Color Application</p>
+       </div>
+      </div><!-- Gallery Item 5 -->
+      <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+       <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+        <div class="text-center p-6">
+         <svg class="w-16 h-16 mx-auto mb-3 opacity-40" style="color: #2d7a3e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg><label class="cursor-pointer"> <span class="text-sm font-medium" style="color: #1a4d2e;">Upload Photo</span> <input type="file" accept="image/*" class="gallery-photo-input hidden" data-gallery="5"> </label>
+        </div>
+       </div>
+       <div class="p-4 bg-white">
+        <h4 class="font-bold" style="color: #1a4d2e;">Apartment Complex</h4>
+        <p class="text-sm" style="color: #6b7280;">Multi-Unit Painting</p>
+       </div>
+      </div><!-- Gallery Item 6 -->
+      <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+       <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+        <div class="text-center p-6">
+         <svg class="w-16 h-16 mx-auto mb-3 opacity-40" style="color: #2d7a3e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg><label class="cursor-pointer"> <span class="text-sm font-medium" style="color: #1a4d2e;">Upload Photo</span> <input type="file" accept="image/*" class="gallery-photo-input hidden" data-gallery="6"> </label>
+        </div>
+       </div>
+       <div class="p-4 bg-white">
+        <h4 class="font-bold" style="color: #1a4d2e;">Restaurant</h4>
+        <p class="text-sm" style="color: #6b7280;">Decorative Wall Finishes</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- EXPERIENCE -->
+   <section id="experience" class="py-20 px-6" style="background: white;">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16"><span class="text-sm font-semibold uppercase tracking-wider" style="color: #1f6aa5;">Our Journey</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2" style="color: #0f2a44;">Experience &amp; Expertise</h2>
+     </div>
+     <div class="grid md:grid-cols-2 gap-12">
+      <div class="space-y-8">
+       <div class="experience-item pb-8">
+        <h3 class="text-xl font-bold" style="color: #0f2a44;">Senior Consultant</h3>
+        <p class="text-sm mb-2" style="color: #1f6aa5;">2018 - Present</p>
+        <p style="color: #6b7280;">Leading strategic initiatives and providing expert consultation for diverse clients across multiple industries.</p><!-- Photo Upload -->
+        <div class="mt-4"><label class="block text-sm font-medium mb-2" style="color: #374151;">Project Photo</label> <input type="file" accept="image/*" class="project-photo-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" data-project="1">
+         <div class="project-photo-preview mt-3 hidden"><img class="w-full h-48 object-cover rounded-lg shadow-md" alt="Project photo">
+         </div>
+        </div>
+       </div>
+       <div class="experience-item pb-8">
+        <h3 class="text-xl font-bold" style="color: #0f2a44;">Project Manager</h3>
+        <p class="text-sm mb-2" style="color: #1f6aa5;">2015 - 2018</p>
+        <p style="color: #6b7280;">Successfully managed over 50 projects with a 98% client satisfaction rate and on-time delivery record.</p><!-- Photo Upload -->
+        <div class="mt-4"><label class="block text-sm font-medium mb-2" style="color: #374151;">Project Photo</label> <input type="file" accept="image/*" class="project-photo-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" data-project="2">
+         <div class="project-photo-preview mt-3 hidden"><img class="w-full h-48 object-cover rounded-lg shadow-md" alt="Project photo">
+         </div>
+        </div>
+       </div>
+       <div class="experience-item pb-8">
+        <h3 class="text-xl font-bold" style="color: #0f2a44;">Business Analyst</h3>
+        <p class="text-sm mb-2" style="color: #1f6aa5;">2012 - 2015</p>
+        <p style="color: #6b7280;">Developed analytical frameworks and business solutions that improved operational efficiency by 35%.</p><!-- Photo Upload -->
+        <div class="mt-4"><label class="block text-sm font-medium mb-2" style="color: #374151;">Project Photo</label> <input type="file" accept="image/*" class="project-photo-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" data-project="3">
+         <div class="project-photo-preview mt-3 hidden"><img class="w-full h-48 object-cover rounded-lg shadow-md" alt="Project photo">
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="rounded-2xl p-8 shadow-xl" style="background: white;">
+       <h3 class="text-2xl font-bold mb-6" style="color: #0f2a44;">Core Competencies</h3>
+       <div class="space-y-5">
+        <div>
+         <div class="flex justify-between mb-2"><span class="font-medium" style="color: #374151;">Strategic Planning</span> <span style="color: #1f6aa5;">95%</span>
+         </div>
+         <div class="h-2 rounded-full" style="background: #e5e7eb;">
+          <div class="h-full rounded-full" style="width: 95%; background: #1f6aa5;"></div>
+         </div>
+        </div>
+        <div>
+         <div class="flex justify-between mb-2"><span class="font-medium" style="color: #374151;">Client Relations</span> <span style="color: #1f6aa5;">98%</span>
+         </div>
+         <div class="h-2 rounded-full" style="background: #e5e7eb;">
+          <div class="h-full rounded-full" style="width: 98%; background: #1f6aa5;"></div>
+         </div>
+        </div>
+        <div>
+         <div class="flex justify-between mb-2"><span class="font-medium" style="color: #374151;">Project Delivery</span> <span style="color: #1f6aa5;">92%</span>
+         </div>
+         <div class="h-2 rounded-full" style="background: #e5e7eb;">
+          <div class="h-full rounded-full" style="width: 92%; background: #1f6aa5;"></div>
+         </div>
+        </div>
+        <div>
+         <div class="flex justify-between mb-2"><span class="font-medium" style="color: #374151;">Problem Solving</span> <span style="color: #1f6aa5;">96%</span>
+         </div>
+         <div class="h-2 rounded-full" style="background: #e5e7eb;">
+          <div class="h-full rounded-full" style="width: 96%; background: #1f6aa5;"></div>
+         </div>
+        </div>
+        <div>
+         <div class="flex justify-between mb-2"><span class="font-medium" style="color: #374151;">Team Leadership</span> <span style="color: #1f6aa5;">90%</span>
+         </div>
+         <div class="h-2 rounded-full" style="background: #e5e7eb;">
+          <div class="h-full rounded-full" style="width: 90%; background: #1f6aa5;"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- CONTACT -->
+   <section id="contact" class="py-20 px-6" style="background: white;">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16"><span class="text-sm font-semibold uppercase tracking-wider" style="color: #1f6aa5;">Get In Touch</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2" style="color: #0f2a44;">Contact Us</h2>
+      <p class="mt-4 max-w-2xl mx-auto" style="color: #6b7280;">Ready to start your next project? Reach out and let's discuss how we can help.</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-12">
+      <div class="space-y-8">
+       <div class="flex items-start gap-5">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(31,106,165,0.1);">
+         <svg class="w-6 h-6" style="color: #1f6aa5;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="text-lg font-bold" style="color: #0f2a44;">Phone</h3>
+         <p id="contact-phone" class="mt-1" style="color: #6b7280;">+254 700 123 456</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-5">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(31,106,165,0.1);">
+         <svg class="w-6 h-6" style="color: #1f6aa5;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="text-lg font-bold" style="color: #0f2a44;">Email</h3>
+         <p id="contact-email" class="mt-1" style="color: #6b7280;">info@collinsmukaria.com</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-5">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(31,106,165,0.1);">
+         <svg class="w-6 h-6" style="color: #1f6aa5;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="text-lg font-bold" style="color: #1a4d2e;">Location</h3>
+         <p id="contact-location" class="mt-1" style="color: #6b7280;">Nairobi, Kenya</p>
+        </div>
+       </div><!-- Google Maps -->
+       <div class="mt-8 rounded-xl overflow-hidden shadow-lg"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.1385636779!2d36.70730744863278!3d-1.3028618999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+       <div class="pt-6">
+        <h3 class="text-lg font-bold mb-4" style="color: #0f2a44;">Follow Us</h3>
+        <div class="flex gap-4"><a href="#" class="w-12 h-12 rounded-full flex items-center justify-center transition-colors" style="background: rgba(31,106,165,0.1); color: #1f6aa5;">
+          <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+          </svg></a> <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center transition-colors" style="background: rgba(31,106,165,0.1); color: #1f6aa5;">
+          <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg></a> <a href="https://www.instagram.com/Batlr.Tedd" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full flex items-center justify-center transition-colors" style="background: rgba(31,106,165,0.1); color: #1f6aa5;">
+          <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg></a>
+        </div>
+       </div>
+      </div><!-- Contact Form -->
+      <div class="rounded-2xl p-8 shadow-xl" style="background: #f8fafc;">
+       <h3 class="text-xl font-bold mb-6" style="color: #0f2a44;">Send a Message</h3>
+       <form id="contact-form" class="space-y-5">
+        <div><label for="name" class="block text-sm font-medium mb-2" style="color: #374151;">Your Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="John Doe">
+        </div>
+        <div><label for="email" class="block text-sm font-medium mb-2" style="color: #374151;">Email Address</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="john@example.com">
+        </div>
+        <div><label for="subject" class="block text-sm font-medium mb-2" style="color: #374151;">Subject</label> <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="How can we help?">
+        </div>
+        <div><label for="message" class="block text-sm font-medium mb-2" style="color: #374151;">Message</label> <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none" placeholder="Tell us about your project..."></textarea>
+        </div><button type="submit" class="w-full py-4 rounded-lg font-semibold text-white transition-all hover:shadow-lg transform hover:-translate-y-0.5" style="background: #1f6aa5;"> Send Message </button>
+       </form>
+       <div id="form-success" class="hidden mt-4 p-4 rounded-lg text-center" style="background: rgba(34, 197, 94, 0.1); color: #16a34a;">
+        <svg class="w-6 h-6 mx-auto mb-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg> Thank you! Your message has been sent successfully.
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- FOOTER -->
+   <footer class="py-12 px-6" style="background: #1a4d2e;">
+    <div class="max-w-6xl mx-auto">
+     <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <div>
+       <h3 class="text-xl font-bold text-white mb-4"><span class="text-green-400">Eco Log</span> Painting Company</h3>
+       <p class="text-white/70">Professional eco-friendly painting services delivering excellence, integrity, and results you can trust.</p>
+      </div>
+      <div>
+       <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+       <nav class="flex flex-col gap-2"><a href="#about" class="text-white/70 hover:text-white transition-colors">About Us</a> <a href="#services" class="text-white/70 hover:text-white transition-colors">Services</a> <a href="#testimonials" class="text-white/70 hover:text-white transition-colors">Testimonials</a> <a href="#gallery" class="text-white/70 hover:text-white transition-colors">Gallery</a> <a href="#contact" class="text-white/70 hover:text-white transition-colors">Contact</a>
+       </nav>
+      </div>
+      <div>
+       <h4 class="font-semibold text-white mb-4">Business Hours</h4>
+       <p class="text-white/70">Monday - Friday: 8:00 AM - 6:00 PM</p>
+       <p class="text-white/70">Saturday: 9:00 AM - 1:00 PM</p>
+       <p class="text-white/70">Sunday: Closed</p>
+      </div>
+     </div>
+     <div class="border-t border-white/10 pt-8 text-center">
+      <p class="text-white/60">© <span id="year"></span> Eco Log Painting Company. All rights reserved.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      hero_title: 'Professional & Reliable Solutions',
+      hero_subtitle: 'Delivering quality workmanship, trust, and excellence for individuals and businesses across all sectors.',
+      about_text: 'Eco Log Painting Company is a trusted provider of professional painting services, dedicated to delivering exceptional quality and eco-friendly solutions. With years of experience and a commitment to excellence, we serve individuals and businesses with integrity, skill, and attention to detail.',
+      contact_phone: '+254 116857554',
+      contact_email: 'mukariacollins055@gmail.com',
+      contact_location: 'Nairobi, Kenya',
+      background_color: '#1a4d2e',
+      accent_color: '#2d7a3e',
+      surface_color: '#f8fafc',
+      text_color: '#374151',
+      light_text_color: '#6b7280'
+    };
+
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Project photo upload handlers
+    const photoInputs = document.querySelectorAll('.project-photo-input');
+    
+    photoInputs.forEach(input => {
+      input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          const previewContainer = input.parentElement.querySelector('.project-photo-preview');
+          const previewImg = previewContainer.querySelector('img');
+          
+          reader.onload = (event) => {
+            previewImg.src = event.target.result;
+            previewContainer.classList.remove('hidden');
+          };
+          
+          reader.readAsDataURL(file);
+        }
+      });
+    });
+
+    // Service photo upload handlers
+    const servicePhotoInputs = document.querySelectorAll('.service-photo-input');
+    
+    servicePhotoInputs.forEach(input => {
+      input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          const previewContainer = input.parentElement.querySelector('.service-photo-preview');
+          const previewImg = previewContainer.querySelector('img');
+          
+          reader.onload = (event) => {
+            previewImg.src = event.target.result;
+            previewContainer.classList.remove('hidden');
+          };
+          
+          reader.readAsDataURL(file);
+        }
+      });
+    });
+
+    // Gallery photo upload handlers
+    const galleryPhotoInputs = document.querySelectorAll('.gallery-photo-input');
+    
+    galleryPhotoInputs.forEach(input => {
+      input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          const galleryItem = input.closest('.gallery-item');
+          const imageContainer = galleryItem.querySelector('.aspect-video');
+          
+          reader.onload = (event) => {
+            imageContainer.innerHTML = `<img src="${event.target.result}" class="w-full h-full object-cover" alt="Gallery image">`;
+          };
+          
+          reader.readAsDataURL(file);
+        }
+      });
+    });
+
+    // Contact form handling - Opens email client
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Get form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value || 'Contact Form Submission';
+      const message = document.getElementById('message').value;
+      
+      // Build email body
+      const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+      
+      // Open email client with pre-filled data
+      window.open(`mailto:mukariacollins055@gmail.com?subject=${encodeURIComponent(subject)}&body=${emailBody}`, '_blank');
+      
+      // Reset form after brief delay
+      setTimeout(() => {
+        contactForm.reset();
+      }, 500);
+    });
+
+    // Update UI function
+    async function onConfigChange(config) {
+      const heroTitle = document.getElementById('hero-title');
+      const heroSubtitle = document.getElementById('hero-subtitle');
+      const aboutText = document.getElementById('about-text');
+      const contactPhone = document.getElementById('contact-phone');
+      const contactEmail = document.getElementById('contact-email');
+      const contactLocation = document.getElementById('contact-location');
+      const headerBg = document.getElementById('header-bg');
+      const ctaBtn = document.getElementById('cta-btn');
+
+      if (heroTitle) heroTitle.textContent = config.hero_title || defaultConfig.hero_title;
+      if (heroSubtitle) heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      if (aboutText) aboutText.textContent = config.about_text || defaultConfig.about_text;
+      if (contactPhone) contactPhone.textContent = config.contact_phone || defaultConfig.contact_phone;
+      if (contactEmail) contactEmail.textContent = config.contact_email || defaultConfig.contact_email;
+      if (contactLocation) contactLocation.textContent = config.contact_location || defaultConfig.contact_location;
+      
+      // Apply colors
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const accentColor = config.accent_color || defaultConfig.accent_color;
+      
+      if (headerBg) headerBg.style.background = backgroundColor;
+      if (ctaBtn) ctaBtn.style.background = accentColor;
+      
+      // Update all accent color elements
+      document.querySelectorAll('[data-accent]').forEach(el => {
+        el.style.color = accentColor;
+      });
+      
+      document.querySelectorAll('[data-accent-bg]').forEach(el => {
+        el.style.background = accentColor;
+      });
+    }
+
+    // Map to capabilities
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              window.elementSdk.setConfig({ accent_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.light_text_color || defaultConfig.light_text_color,
+            set: (value) => {
+              config.light_text_color = value;
+              window.elementSdk.setConfig({ light_text_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    // Map to edit panel values
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['hero_title', config.hero_title || defaultConfig.hero_title],
+        ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+        ['about_text', config.about_text || defaultConfig.about_text],
+        ['contact_phone', config.contact_phone || defaultConfig.contact_phone],
+        ['contact_email', config.contact_email || defaultConfig.contact_email],
+        ['contact_location', config.contact_location || defaultConfig.contact_location]
+      ]);
+    }
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c07475735347406',t:'MTc2ODgzNTYzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
